@@ -1,12 +1,56 @@
-# React + Vite
+# 🏧 ATM Risk Map
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ATM Risk Map is a full-stack web application that displays ATMs on a map along with their environmental risk levels. Risk levels are determined based on ATM location (indoor/outdoor) and real-time temperature data.
 
-Currently, two official plugins are available:
+## 🔧 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend
+- ⚛️ React
+- 🗺️ Leaflet & React-Leaflet (for map rendering)
+- 🧭 Geolocation API
 
-## Expanding the ESLint configuration
+### Backend
+- 🐍 Python
+- 🔥 Flask (RESTful API)
+- 🌐 Google Places API
+- ☀️ Open-Meteo API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- Show nearby ATMs on a map with custom risk-based markers (green, yellow, red)
+- Calculate risk levels using real-time temperature and location context
+- Advanced search by city and district
+- Modal popups showing detailed ATM risk data
+- Responsive UI with pagination and interactivity
+
+---
+
+## 📦 Installation and Setup
+
+
+bash
+git clone https://github.com/your-username/atm-risk-map.git
+cd atm-risk-map
+
+For the front end:
+
+cd frontend
+npm install
+npm run dev
+
+***********
+
+For the backend
+
+cd backend
+python -m venv venv
+source venv/bin/activate  
+pip install -r requirements.txt
+
+-Create .env file and add Google Places API key.
+
+GOOGLE_API_KEY=*****
+
+then run python server.py
